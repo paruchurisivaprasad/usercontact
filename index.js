@@ -8,15 +8,7 @@ const mongoose=require('mongoose');
 
 mongoose.connect("mongodb+srv://paruchurisivaprasad:alMA933@cluster0.webkl.mongodb.net/contactForm?retryWrites=true&w=majority");
 let c=0;
-app.use((req,res,next)=>{
-  
-  console.log(os.platform());
-console.log(os.hostname());
-console.log(++c);
-console.log("raj");
-next();
-  
-})
+
 
 
 
@@ -24,7 +16,13 @@ const User = require("./model");
 const PORT = process.env.PORT || 3000;
 app.use(express.json());
 app.get("/", (req, res) => {
-  res.send(`<h1> portfolio form </h1>`);
+   console.log(os.platform());
+console.log(os.hostname());
+console.log(++c);
+console.log("raj");
+
+  res.send(`<h1> paruchuri sivaprasad</h1>`);
+
 });
 
 //API to Insert User Details
