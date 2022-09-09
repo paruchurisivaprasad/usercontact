@@ -7,8 +7,13 @@ const os=require('os');
 const mongoose=require('mongoose');
 
 mongoose.connect("mongodb+srv://paruchurisivaprasad:alMA933@cluster0.webkl.mongodb.net/contactForm?retryWrites=true&w=majority");
+let c=0;
 console.log(os.platform());
 console.log(os.hostname());
+console.log(++c);
+console.log("raj");
+
+
 
 
 const User = require("./model");
