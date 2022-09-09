@@ -2,9 +2,14 @@ const express = require("express");
 const cors = require('cors');
 const app = express();
 app.use(cors());
+const os=require('os');
+
 const mongoose=require('mongoose');
 
 mongoose.connect("mongodb+srv://paruchurisivaprasad:alMA933@cluster0.webkl.mongodb.net/contactForm?retryWrites=true&w=majority");
+console.log(os.platform());
+console.log(os.hostname());
+
 
 const User = require("./model");
 const PORT = process.env.PORT || 3000;
