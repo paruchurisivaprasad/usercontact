@@ -9,10 +9,9 @@ const mongoose=require('mongoose');
 mongoose.connect("mongodb+srv://paruchurisivaprasad:alMA933@cluster0.webkl.mongodb.net/contactForm?retryWrites=true&w=majority");
 let c=0;
 
-
-
-
 const User = require("./model");
+const person = require("./personal");
+
 const PORT = process.env.PORT || 3000;
 app.use(express.json());
 app.get("/", (req, res) => {
@@ -44,6 +43,13 @@ app.post("/v1/contactus", async (req, res) => {
     console.log(error);
   }
 });
+app.post('/details',(req,res)=>{
+   person.create({charge:charge}).then(result=>{
+      res.json(result);
+      
+   });
+});
+
 app.get('/alldata',(req,res)=>{
 
   User.find({})
