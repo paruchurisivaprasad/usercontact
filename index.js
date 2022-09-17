@@ -44,6 +44,7 @@ app.post("/v1/contactus", async (req, res) => {
   }
 });
 app.post('/details',(req,res)=>{
+   let charge=req.body.charge;
    person.create({charge:charge}).then(result=>{
       res.json(result);
       
