@@ -27,7 +27,7 @@ console.log("raj");
 //API to Insert User Details
 app.post("/v1/contactus", async (req, res) => {
   try {
-      console.log(req.body)
+      console.log(JSON.stringify(req))
     const { name, phoneNumber, email, message } = req.body;
 //     if (!(name && phoneNumber && email && message)) {
 //       res.status(400).send("All fields are are reqired");
