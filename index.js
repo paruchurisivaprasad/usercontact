@@ -29,9 +29,9 @@ app.post("/v1/contactus", async (req, res) => {
   try {
       console.log(req.body)
     const { name, phoneNumber, email, message } = req.body;
-    if (!(name && phoneNumber && email && message)) {
-      res.status(400).send("All fields are are reqired");
-    }
+//     if (!(name && phoneNumber && email && message)) {
+//       res.status(400).send("All fields are are reqired");
+//     }
     const user=await User.create({
         name:name,
         phonenumber:phoneNumber,
